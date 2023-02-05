@@ -1,0 +1,9 @@
+<div id = "main" class = 'container col-6 margin-top'>
+  <div id=timer class = 'text-center h2'>00:00:00</div>
+  <canvas id="canvas" class = 'margin-top' data-game-mode = <%= @game_mode %>></canvas>
+</div>
+
+<%= form_tag(fifteen_result_url, :method => "post", :id => 'results') do %>
+  <%= hidden_field_tag 'time', 0  %>
+  <%= hidden_field_tag 'click', 0  %>
+<% end %> 

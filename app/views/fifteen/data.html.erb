@@ -1,0 +1,58 @@
+<% if @error == 'Записей пока нет' %>
+    <div class = 'container col-12 margin-top'>
+        <p class = 'text-center h3 margin-top'><%= t('.error') %></p>
+    </div>
+<% else %>  
+    <div class = 'container col-12 margin-top'>
+        <div class = 'row'>
+            <div class = 'col-6'>
+                <p class = 'text-center h3 margin-top'><%= t('.results') %></p>
+                <table class="table margin-top">
+                    <tr>
+                        <td><%= t('.number') %></td>
+                        <td><%= t('.date') %></td>
+                        <td><%= t('.time') %></td>
+                        <td><%= t('.steps') %></td>            
+                    </tr>
+                    <% @res_arr_date.each_with_index do |date, ind| %>
+                        <tr>
+                            <td><%= "#{ind+1}." %></td>
+                            <td><%= date %></td>
+                            <td><%= @res_arr_time[ind].to_s %></td>
+                            <td><%= @res_arr_clicks[ind].to_s %></td>            
+                        </tr>
+                    <% end %>      
+                </table>
+            </div>
+            <div class = 'col-6'>
+                <p class = 'text-center h3'><%= t('.records') %></p>
+                <p class = 'text-center h3'><%= t('.best_time') %></p>
+                    <table class="table margin-top">
+                        <tr>
+                            <td><%= t('.date') %></td>
+                            <td><%= t('.time') %></td>
+                            <td><%= t('.steps') %></td>            
+                        </tr>
+                        <tr>
+                            <td><%= @res_arr_date[@min_time] %></td>
+                            <td><%= @res_arr_time[@min_time] %></td>
+                            <td><%= @res_arr_clicks[@min_time] %></td>            
+                        </tr>    
+                    </table>
+                <p class = 'text-center h3'><%= t('.best_steps') %></p>
+                <table class="table margin-top">
+                    <tr>
+                        <td><%= t('.date') %></td>
+                        <td><%= t('.time') %></td>
+                        <td><%= t('.steps') %></td>            
+                    </tr>
+                    <tr>
+                        <td><%= @res_arr_date[@min_clicks] %></td>
+                        <td><%= @res_arr_time[@min_clicks] %></td>
+                        <td><%= @res_arr_clicks[@min_clicks] %></td>            
+                    </tr>     
+                </table>
+            </div>
+        </div>
+    </div>
+<% end %>

@@ -1,0 +1,33 @@
+
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %><%= t('.error') %>:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group row margin-top">
+    <%= form.label :login, t('users._form.login'), class: 'col-6 h5' %>
+    <%= form.text_field :email, id: :user_email, class: 'form-control col-6' %>
+  </div>
+
+  <div class="form-group row margin-top">
+    <%= form.label :password, t('users._form.password'), class: 'col-6 h5' %>
+    <%= form.password_field :password, class: 'form-control col-6' %>
+  </div>
+
+  <div class="form-group row margin-top">
+    <%= form.label :password_con, t('users._form.password_con'), class: 'col-6 h5' %>
+    <%= form.password_field :password_confirmation, class: 'form-control col-6' %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag t('users._form.registration'), class: "btn btn-primary btn-lg btn-block btn-dark margin-top btn-center  col-6"  %>
+  </div>
+<% end %>

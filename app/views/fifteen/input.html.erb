@@ -1,0 +1,21 @@
+<div class = 'container'>
+    <div class = 'row'>
+        <div class = 'col-4'>
+            <p></p>
+        </div>
+        <div class = 'col-4'>
+            <h2 id = 'size_game'><%= t('.name') %></h2>
+        </div>
+     </div>
+    <div class = 'row'>
+        <div class = 'col-4'>
+            <p></p>
+        </div>
+        <div class = 'col-4'>
+            <%= form_tag(fifteen_game_url, :method => "post") do %>
+            <%= select_tag :game_mode, options_for_select(['4x4', '5x5', '6x6'], '4x4'), id: 'fifteen_select', class: 'form-control '%>
+            <%= submit_tag t('.play'), class: "btn btn-primary btn-lg btn-block btn-dark"%>
+            <% end %> 
+        </div>
+    </div>
+</div>

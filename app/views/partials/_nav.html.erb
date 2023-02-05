@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-warning d-flex justify-content-between">
+
+  <%# <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button> %>
+
+  <%# <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> %>
+
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active h5" href="<%= root_path %>"><%= t('nav.main') %></a>
+    </div>
+    <div class="navbar-nav">
+      <% if signed_in? %>
+        <a class="nav-item nav-link active h5" href="<%= session_logout_path %>"><%= t('nav.exit') %></a>
+      <% else %>
+        <a class="nav-item nav-link active h5" href="<%= new_user_path %>"><%= t('nav.registration') %></a>
+        <a class="nav-item nav-link active h5" href="<%= session_login_path %>"><%= t('nav.sign_in') %></a>
+      <% end %>
+
+
+      <div class="btn-group align-items-start">
+        <% I18n.available_locales.each do |locale| %>
+          <%# <button class="btn btn-outline-primary"> %>
+          <%= link_to t(locale), url_for(locale: locale), class:"btn btn-outline-dark bg-warning text-dark"%>
+          <%# </button> %>
+        <% end %>
+      </div>
+    </div>
+
+
+  <%# </div> %>
+
+</nav> 

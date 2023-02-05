@@ -1,0 +1,14 @@
+<div class = 'container col-3 margin-top'>
+    <h1 class = 'text-center'>Победа!</h1>
+    <img src="/assets/1.jpg" width="250" height="250" class='btn-center'>
+    <p class = 'margin-top h3'>Кликов: <%= @click %></p>
+    <p class = 'margin-top h3'>Время: <%= @time %></p>
+    <%= form_tag(fifteen_input_url, :method => "get") do %>
+    <%= submit_tag "Новая игра",class: "btn btn-primary btn-lg btn-block margin-top"%>
+    <% end %> 
+    <%= form_tag(fifteen_main_url, :method => "get") do %>
+    <%= submit_tag "Главная",class: "btn btn-primary btn-lg btn-block margin-top"%>
+    <% end %> 
+</div>
+
+

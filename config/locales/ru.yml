@@ -1,0 +1,48 @@
+ru:
+  nav: 
+      main: "Главная"
+      exit: "Выход"
+      registration: "Регистрация"
+      sign_in: "Вход"
+  session:
+    login:
+      login: "Логин"  
+      password: "Пароль"
+      sign_in: "Вход" 
+  fifteen:
+    main:
+      name: "Пятнашки"
+      new_game: "Новая игра"
+      results: "Результаты"
+    input:
+      name: "Выберите размер поля"  
+      play: "Играть"
+    result:
+      name: "Победа!"
+      clicks: "Ходов:"
+      time: "Время:"
+      main: "Главная"
+      new_game: "Новая игра"
+    data:
+      results: "Результаты всех игр" 
+      number: "Номер"
+      date: "Дата"
+      time: "Время игры" 
+      steps: "Количество ходов"
+      records: "Рекорды"
+      best_time: "Лучшее время"
+      best_steps: "Лучшее количество кликов"
+      error: "Записей пока нет"
+  users:
+    new:
+      new_user: "Новый пользователь"
+      back: "Назад"
+    _form: 
+      error: "Сохранение этого пользователя запрещено:"
+      login: "Логин"  
+      password: "Пароль"
+      password_con: "Подтверждение пароля"
+      registration: "Регистрация" 
+
+       
+      

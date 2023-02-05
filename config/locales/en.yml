@@ -1,0 +1,45 @@
+en:
+  nav: 
+      main: "Home"
+      exit: "Exit"
+      registration: "Sign up"
+      sign_in: "Sign in"  
+  session:
+    login:
+      login: "Login"  
+      password: "Password"
+      sign_in: "Sign in"
+  fifteen:
+    main:
+      name: "Barley-break"
+      new_game: "New game"
+      results: "Results" 
+    input:
+      name: "Select a field size"  
+      play: "Play"
+    result:
+      name: "You win!"
+      clicks: "Steps:"
+      time: "Time:"
+      main: "Home"
+      new_game: "New game"
+    data:
+      results: "Results of all games" 
+      number: "Number"
+      date: "Date"
+      time: "Game time" 
+      steps: "Count steps"
+      records: "Records"
+      best_time: "Best time"
+      best_steps: "Best count steps"
+      error: "No records yet"
+  users:
+    new:
+      new_user: "New user"
+      back: "Back"
+    _form: 
+      error: "Saving this user is prohibited:"
+      login: "Login"  
+      password: "Password"
+      password_con: "Password confimation"
+      registration: "Sign up" 

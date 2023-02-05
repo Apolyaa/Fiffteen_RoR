@@ -1,0 +1,10 @@
+<div class = 'container col-3 margin-top'>
+    <h1 class = 'text-center'><%= t('.name') %></h1>
+    <%= form_tag(fifteen_input_url, :method => "get") do %>
+    <%= submit_tag t('.new_game'), class: "btn btn-primary btn-lg btn-block btn-dark margin-top"%>
+    <% end %>
+
+    <%= form_tag(fifteen_data_url, :method => "get") do %>
+    <%= submit_tag t('.results'),class: "btn btn-primary btn-lg btn-block btn-dark margin-top"%>
+    <% end %> 
+</div>

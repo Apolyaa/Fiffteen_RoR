@@ -1,0 +1,13 @@
+<%= render 'partials/flash' %>
+
+<%= form_tag url_for(controller: :session, action: :create), method: 'post', class: 'form-group col-3 container' do %>
+    <div class = 'margin-top'>
+    <%= label_tag t('.login'), nil, class: 'label h3' %>
+    <%= text_field_tag :email, nil, class: 'form-control' %>
+    </div>
+    <div class = 'margin-top'>
+    <%= label_tag t('.password'), nil, class: 'label h3' %>
+    <%= password_field_tag 'password', nil, class: 'form-control' %>
+    </div>
+    <%= submit_tag t('.sign_in'),  class: "btn btn-primary btn-lg btn-block btn-dark margin-top"  %>
+<% end %>

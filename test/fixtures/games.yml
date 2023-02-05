@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  game_date: 2021-12-11 22:32:09
+  time_to_win: 1
+  clicks_to_win: 1
+
+two:
+  id: MyString
+  game_date: 2021-12-11 22:32:09
+  time_to_win: 1
+  clicks_to_win: 1
